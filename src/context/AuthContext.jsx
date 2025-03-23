@@ -14,6 +14,9 @@ export function AuthProvider({ children }) {
       try {
         const response = await fetch(`${import.meta.env.VITE_API_URL}auth/status`, {
           credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
         })
 
         if (response.ok) {
