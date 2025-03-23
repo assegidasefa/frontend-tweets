@@ -19,12 +19,8 @@ export default function Home() {
 
   const handleTwitterLogin = () => {
     // Redirect to backend auth endpoint
-    // console.log("err",import.meta.env.VITE_API_URL)
-    // window.location.href = `${import.meta.env.VITE_API_URL}api/auth/twitter`
-
-    console.log("API URL:", import.meta.env.VITE_API_URL);
-    window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/twitterttt`.replace(/([^:]\/)\/+/g, "$1");
-
+    console.log("err",import.meta.env.VITE_API_URL)
+    window.location.href = `${import.meta.env.VITE_API_URL}api/auth/twitter`
   }
 
   return (
