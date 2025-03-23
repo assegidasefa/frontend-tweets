@@ -23,7 +23,7 @@ export default function Home() {
     // window.location.href = `${import.meta.env.VITE_API_URL}api/auth/twitter`
 
     console.log("API URL:", import.meta.env.VITE_API_URL);
-    window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/twitter`.replace(/([^:]\/)\/+/g, "$1");
+    window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/twitterttt`.replace(/([^:]\/)\/+/g, "$1");
 
   }
 
