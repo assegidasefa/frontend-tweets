@@ -51,7 +51,7 @@ export default function Dashboard() {
         })
         setTweet("")
         setPostedUrl(data.tweet.url);
-        navigate('verify', { state: { tweetUrl: data.tweet.url } });
+        navigate('/verify', { state: { tweetUrl: data.tweet.url } });
       } else {
         throw new Error(data.message || "Failed to post tweet")
       }

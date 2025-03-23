@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     if (user && !isLoading) {
-      navigate("dashboard")
+      navigate("/dashboard")
     }
   }, [user, isLoading, navigate])
 
