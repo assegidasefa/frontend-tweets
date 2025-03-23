@@ -27,7 +27,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-sky-100 to-white p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold">Twitter Connecddddddt</CardTitle>
+          <CardTitle className="text-2xl font-bold">Twitter Connect</CardTitle>
           <CardDescription>Login with Twitter to post and verify tweets</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
