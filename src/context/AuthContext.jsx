@@ -12,7 +12,7 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/status`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}api/auth/status`, {
           credentials: "include",
           headers: {
             "Content-Type": "application/json",
@@ -38,7 +38,7 @@ export function AuthProvider({ children }) {
   // Handle OAuth callback
   const handleCallback = useCallback(async (code) => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/callback`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}api/auth/callback`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export function AuthProvider({ children }) {
   // Logout function
   const logout = useCallback(async () => {
     try {
-      await fetch(`${import.meta.env.VITE_API_URL}/api/auth/logout`, {
+      await fetch(`${import.meta.env.VITE_API_URL}api/auth/logout`, {
         method: "POST",
         credentials: "include",
       })

@@ -31,7 +31,7 @@ export default function Dashboard() {
 
     setIsLoading(true)
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/tweets/post`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}api/tweets/post`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
