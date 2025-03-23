@@ -20,14 +20,14 @@ export default function Home() {
   const handleTwitterLogin = () => {
     // Redirect to backend auth endpoint
     console.log("err",import.meta.env.VITE_API_URL)
-    window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/twittersdfsbkdfskdbf`
+    window.location.href = `${import.meta.env.VITE_API_URL}api/auth/twitter`
   }
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-sky-100 to-white p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold">Twitter Connect</CardTitle>
+          <CardTitle className="text-2xl font-bold">Twitter Connecddddddt</CardTitle>
           <CardDescription>Login with Twitter to post and verify tweets</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
