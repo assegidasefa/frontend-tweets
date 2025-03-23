@@ -12,7 +12,7 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/status`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}auth/status`, {
           credentials: "include",
         })
 
