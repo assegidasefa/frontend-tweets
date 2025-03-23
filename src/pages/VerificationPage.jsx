@@ -32,7 +32,7 @@ export default function VerificationPage() {
 
     setIsVerifying(true)
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/tweets/verify`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/tweets/verify`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
