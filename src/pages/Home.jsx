@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "../context/AuthContext"
 import { Button } from "../components/ui/button"
@@ -9,7 +9,10 @@ import { Twitter } from "lucide-react"
 
 export default function Home() {
   const { user, isLoading } = useAuth()
+  const [isButtonClicked,setIsButtonClicked] = useState(false)
   const navigate = useNavigate()
+
+  console.log("is log",isLoading,user)
 
   useEffect(() => {
     if (user && !isLoading) {
@@ -19,6 +22,7 @@ export default function Home() {
 
   const handleTwitterLogin = () => {
     // Redirect to backend auth endpoint
+    setIsButtonClicked(true)
     console.log("err",import.meta.env.VITE_API_URL)
     window.location.href = `${import.meta.env.VITE_API_URL}api/auth/twitter`
   }
@@ -50,7 +54,10 @@ export default function Home() {
           </div>
         </CardContent>
         <CardFooter>
-          <Button className="w-full bg-sky-500 hover:bg-sky-600" onClick={handleTwitterLogin} disabled={isLoading}>
+          <Button className="w-full bg-sky-500 hover:bg-sky-600" onClick={handleTwitterLogin} 
+          
+          disabled={isButtonClicked}
+          >
             <Twitter className="mr-2 h-4 w-4" />
             Login with Twitter
           </Button>
